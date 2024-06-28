@@ -60,3 +60,14 @@ import Layout from '../layouts/BlogPost.astro';
 		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
 	</p>
 </Layout>
+
+<script is:inline>
+	function sleep(ms) {
+		const start = Date.now();
+		while(Date.now() < start + ms) {
+		}
+	}
+	console.log('Blocking');
+	sleep(5000);
+	console.log('Done');
+</script>
