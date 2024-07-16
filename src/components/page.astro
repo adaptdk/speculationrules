@@ -1,0 +1,48 @@
+---
+import BaseHead from "./BaseHead.astro";
+import Header from "./Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>
+        This
+        <span id="status">page</span>
+      </h1>
+      <div id="speculationStatus"></div>
+      <img
+        src=`https://placehold.co/720x${Math.floor(Math.random() * (400 - 200 + 1) + 200)}`
+        alt="A placeholder image"
+      />
+      <p>
+        Non equidem invideo, miror magis posuere velit aliquet. Quisque placerat
+        facilisis egestas cillum dolore. Curabitur blandit tempus ardua
+        ridiculus sed magna. Contra legem facit qui id facit quod lex prohibet.
+        Petierunt uti sibi concilium totius Galliae in diem certam indicere.
+      </p>
+    </main>
+    <script is:inline>
+      function updateRenderStatus() {
+        document.getElementById("status").textContent = `page ${
+          window.isPrerendered ? "is" : "is not"
+        } prerendered`;
+        if (window.speculation) {
+          document.getElementById("speculationStatus").textContent =
+            window.speculation;
+        }
+      }
+      window.updateStatus = updateRenderStatus;
+      updateRenderStatus();
+      document.addEventListener("prerenderingchange", updateRenderStatus, {
+        once: true,
+      });
+    </script>
+  </body>
+</html>

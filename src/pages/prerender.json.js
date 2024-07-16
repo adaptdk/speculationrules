@@ -3,7 +3,7 @@ export async function GET({ params, request }) {
     JSON.stringify({
       prerender: [
         {
-          urls: ["/", "/blog", "/about"],
+          urls: ["/", "/BlockMainThread"],
         },
       ],
     }),
