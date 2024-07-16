@@ -13,41 +13,40 @@ import HeaderLink from "./HeaderLink.astro";
       >
       <HeaderLink
         class="prerender-conservative"
-        href="/conservative?prerender=conservative"
+        href="conservative?prerender=conservative"
         >Prerender conservative</HeaderLink
       >
-      <HeaderLink class="prerender-moderate" href="/moderate?prerender=moderate"
+      <HeaderLink class="prerender-moderate" href="moderate?prerender=moderate"
         >Prerender moderate</HeaderLink
       >
       <hr />
       <HeaderLink
         class="prerender-immediate"
-        href="/immediate?blockFor=3000&prerender=immediate"
+        href="immediate?blockFor=3000&prerender=immediate"
         >Prerender immediate and block for 3 seconds</HeaderLink
       >
       <HeaderLink
         class="prerender-conservative"
-        href="/conservative?blockFor=3000&prerender=conservative"
+        href="conservative?blockFor=3000&prerender=conservative"
         >Prerender conservative and block for 3 seconds</HeaderLink
       >
 
       <HeaderLink
         class="prerender-moderate"
-        href="/moderate?blockFor=3000&prerender=moderate"
+        href="moderate?blockFor=3000&prerender=moderate"
         >Prerender moderate and block for 3 seconds</HeaderLink
       >
 
       <hr />
-      <HeaderLink
-        class="prefetch-immediate"
-        href="/immediate?prefetch=immediate">Prefetch immediate</HeaderLink
+      <HeaderLink class="prefetch-immediate" href="immediate?prefetch=immediate"
+        >Prefetch immediate</HeaderLink
       >
       <HeaderLink
         class="prefetch-conservative"
-        href="/conservative?prefetch=conservative"
+        href="conservative?prefetch=conservative"
         >Prefetch conservative</HeaderLink
       >
-      <HeaderLink class="prefetch-moderate" href="/moderate?prefetch=moderate"
+      <HeaderLink class="prefetch-moderate" href="moderate?prefetch=moderate"
         >Prefetch moderate</HeaderLink
       >
     </ul>
