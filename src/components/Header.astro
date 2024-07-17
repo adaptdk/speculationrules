@@ -53,7 +53,7 @@ import HeaderLink from "./HeaderLink.astro";
   </nav>
   <script is:inline>
     document.querySelectorAll(".menu-item").forEach((item) => {
-      if (item.href === location.href) {
+      if (item.href === location.href.replace("/?", "?")) {
         item.classList.add("active");
       }
     });
